@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profile_toolbar_username"
+        app:showAsAction="ifRoom"
+        android:title="@string/username" />
+
+    <item
+        android:id="@+id/profile_toolbar_add_post"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_box"
+        android:title="@string/add_box" />
+
+    <item
+        android:id="@+id/profile_toolbar_menu"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/menu" />
+
+</menu>
