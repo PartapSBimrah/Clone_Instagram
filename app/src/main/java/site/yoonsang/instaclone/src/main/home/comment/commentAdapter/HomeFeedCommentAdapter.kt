@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import site.yoonsang.instaclone.R
 import site.yoonsang.instaclone.databinding.ItemCommentBinding
 import site.yoonsang.instaclone.src.main.home.comment.HomeFeedCommentFragment
 import site.yoonsang.instaclone.src.main.home.comment.models.ResultGetFeedCommentRequest
@@ -25,6 +26,7 @@ class HomeFeedCommentAdapter(
         val reply = binding.itemCommentReply
         val heart = binding.itemCommentHeart
         val likeCount = binding.itemCommentLikeCount
+        val commentLayout = binding.commentLayout
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,6 +43,7 @@ class HomeFeedCommentAdapter(
         holder.heart.setOnClickListener {
         }
         holder.itemView.setOnLongClickListener {
+            holder.commentLayout.setBackgroundResource(R.color.unselected_button)
             fragment.deleteComment(list[position].feedCommentId)
             return@setOnLongClickListener true
         }
